@@ -58,6 +58,10 @@ public class Smiley : MonoBehaviour
         {
             yield return StartCoroutine(DrawLineAndKeepPrevious(mouthVertices[i], mouthVertices[i + 1]));
         }
+        
+        // clear the mesh after drawing the smiley face after 1s
+        yield return new WaitForSeconds(2);
+        mesh.Clear();
     }
 
     Vector3[] GenerateCircleVertices(Vector3 center, float radius, int numSegments)

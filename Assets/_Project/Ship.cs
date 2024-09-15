@@ -17,7 +17,11 @@ public class Ship : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-
+        Invoke("DelayStart", 2);
+    }
+    
+    private void DelayStart()
+    {
         // Define the vertices for the ship, adjusted by the shipSize
         Vector3[] shipVertices = GenerateShipVertices();
 

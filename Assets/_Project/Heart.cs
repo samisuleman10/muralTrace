@@ -18,6 +18,12 @@ public class Heart : MonoBehaviour
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
 
+        // Start drawing the heart shape
+        Invoke("DelayStart", 2);
+    }
+    
+    private void DelayStart()
+    {
         // Define the vertices for the heart shape
         Vector3[] heartVertices = GenerateHeartVertices();
 
@@ -81,6 +87,9 @@ public class Heart : MonoBehaviour
             Vector3 end = heartVertices[(i + 1) % heartVertices.Length];  // Loop back to the start at the end
             yield return StartCoroutine(DrawHeartEdge(start, end));  // Draw each edge progressively
         }
+        // Wait for 1 second after drawing the heart, then clear the mesh
+        yield return new WaitForSeconds(2f);
+        mesh.Clear();  // Clear the mesh to remove the drawn heart
     }
 
     IEnumerator DrawHeartEdge(Vector3 start, Vector3 end)

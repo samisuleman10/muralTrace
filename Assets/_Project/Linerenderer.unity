@@ -491,13 +491,73 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: drawSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813142428503537145, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: shipSize
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813142428503537145, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: drawSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813142428503537145, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813142428503537145, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: lineThickness
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961859430091623387, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: drawSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961859430091623387, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961859430091623387, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: lineThickness
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4702001887981554692, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_Name
       value: TriangleMesh
       objectReference: {fileID: 0}
+    - target: {fileID: 4801068361056326633, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: drawSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4801068361056326633, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293773231144212282, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293773231144212282, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: drawSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293773231144212282, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293773231144212282, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: curveResolution
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8868345918634996577, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8868345918634996577, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_LocalPosition.y
@@ -533,6 +593,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8868345918634996577, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900641153992696224, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

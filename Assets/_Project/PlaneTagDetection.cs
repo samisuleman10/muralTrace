@@ -35,14 +35,14 @@ namespace MuralTrace
             if (m_Plane.classification == PlaneClassification.Wall)
             {
                 traceImage.SetActive(true);
-                m_ClassificationText.gameObject.transform.parent.gameObject.SetActive(false);
-                m_AlignmentText.gameObject.transform.parent.gameObject.SetActive(false);
+                //m_ClassificationText.gameObject.transform.parent.gameObject.SetActive(false);
+                //m_AlignmentText.gameObject.transform.parent.gameObject.SetActive(false);
             }
-            else
+            else if (m_Plane.classification != PlaneClassification.Wall)
             {
                 traceImage.SetActive(false);
-                m_ClassificationText.gameObject.transform.parent.gameObject.SetActive(true);
-                m_AlignmentText.gameObject.transform.parent.gameObject.SetActive(true);
+                //m_ClassificationText.gameObject.transform.parent.gameObject.SetActive(true);
+                //m_AlignmentText.gameObject.transform.parent.gameObject.SetActive(true);
             }
 
             transform.position = m_Plane.center;

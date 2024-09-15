@@ -16,7 +16,10 @@ public class Fish : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-
+        Invoke("DelayStart", 2);
+    }
+    private void DelayStart()
+    {
         // Define the vertices for the fish body and tail
         Vector3[] fishVertices = GenerateFishVertices();
 
@@ -65,6 +68,10 @@ public class Fish : MonoBehaviour
 
         // Finally, close the tail by connecting it back to the body
         //yield return StartCoroutine(DrawFishEdge(fishVertices[6], fishVertices[7]));
+        
+        // clear the mesh after drawing the fish after 1s
+        yield return new WaitForSeconds(2);
+        mesh.Clear();
     }
 
     IEnumerator DrawFishEdge(Vector3 start, Vector3 end)

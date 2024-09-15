@@ -16,10 +16,13 @@ public class House : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-
+        Invoke("DelayStart", 2);
+    }
+    
+    private void DelayStart()
+    {
         // Define the vertices for the house (square body and triangle roof)
         Vector3[] houseVertices = GenerateHouseVertices();
-
         // Start drawing the house edges sequentially
         StartCoroutine(DrawHouseEdges(houseVertices));
     }
@@ -55,6 +58,11 @@ public class House : MonoBehaviour
         // Then, draw the roof (3 sides)
         yield return StartCoroutine(DrawHouseEdge(houseVertices[4], houseVertices[6]));  // Left roof side
         yield return StartCoroutine(DrawHouseEdge(houseVertices[6], houseVertices[5]));  // Right roof side
+        
+        // clear the mesh after drawing the house after 1s  
+        yield return new WaitForSeconds(3);
+        mesh.Clear();
+        
     }
 
     IEnumerator DrawHouseEdge(Vector3 start, Vector3 end)
