@@ -10,7 +10,8 @@ public class Smiley : MonoBehaviour
     private List<int> triangles = new List<int>();
 
     public float lineThickness = 0.05f;  // Thickness of the line
-    public float drawSpeed = 1.0f;  // Speed of line drawing
+    public float drawSpeed = 1.0f;  // Speed of line drawing (default for the face)
+    public float fastDrawSpeed = 10.0f;  // Fast speed for drawing the eyes
     public int segments = 50;  // Number of segments for the eyes and mouth
     public float faceRadius = 1.5f;  // Radius of the face circle
     public float eyeRadius = 0.3f;  // Radius of the eyes
@@ -36,21 +37,31 @@ public class Smiley : MonoBehaviour
         }
         yield return StartCoroutine(DrawLineAndKeepPrevious(faceVertices[faceVertices.Length - 1], faceVertices[0]));
 
-        // Draw left eye
-        Vector3[] leftEyeVertices = GenerateCircleVertices(new Vector3(-0.6f, 0.5f, 0), eyeRadius, segments);
+        // Position the eyes proportionally to the face size
+        float eyeOffsetX = faceRadius * 0.4f;  // 40% of the face radius on the X-axis for the eyes
+        float eyeOffsetY = faceRadius * 0.35f; // 35% of the face radius on the Y-axis for the eyes
+
+        // Draw left eye (positioned relative to face radius) - Increase draw speed for the eyes
+        float originalDrawSpeed = drawSpeed;  // Store the original draw speed
+        drawSpeed = fastDrawSpeed;  // Set to faster draw speed for the eyes
+
+        Vector3[] leftEyeVertices = GenerateCircleVertices(new Vector3(-eyeOffsetX, eyeOffsetY, 0), eyeRadius, segments);
         for (int i = 0; i < leftEyeVertices.Length - 1; i++)
         {
             yield return StartCoroutine(DrawLineAndKeepPrevious(leftEyeVertices[i], leftEyeVertices[i + 1]));
         }
         yield return StartCoroutine(DrawLineAndKeepPrevious(leftEyeVertices[leftEyeVertices.Length - 1], leftEyeVertices[0]));
 
-        // Draw right eye
-        Vector3[] rightEyeVertices = GenerateCircleVertices(new Vector3(0.6f, 0.5f, 0), eyeRadius, segments);
+        // Draw right eye (positioned relative to face radius) - Keep fast draw speed
+        Vector3[] rightEyeVertices = GenerateCircleVertices(new Vector3(eyeOffsetX, eyeOffsetY, 0), eyeRadius, segments);
         for (int i = 0; i < rightEyeVertices.Length - 1; i++)
         {
             yield return StartCoroutine(DrawLineAndKeepPrevious(rightEyeVertices[i], rightEyeVertices[i + 1]));
         }
         yield return StartCoroutine(DrawLineAndKeepPrevious(rightEyeVertices[rightEyeVertices.Length - 1], rightEyeVertices[0]));
+
+        // Restore the original draw speed for the rest of the face
+        drawSpeed = originalDrawSpeed;
 
         // Draw mouth (an arc facing downward, slightly smaller and moved up)
         Vector3[] mouthVertices = GenerateArcVertices(mouthPosition, mouthRadius, Mathf.PI, segments, Mathf.PI); // Start at π and end at 2π

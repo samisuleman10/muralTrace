@@ -1221,11 +1221,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: drawSpeed
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: eyeRadius
-      value: 0.03
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_Enabled
@@ -1233,19 +1233,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: faceRadius
-      value: 0.15
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: mouthRadius
-      value: 0.1
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: fastDrawSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: lineThickness
-      value: 0.0025
+      value: 0.0015
       objectReference: {fileID: 0}
     - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: mouthPosition.y
-      value: -0.01
+      value: -0.005
       objectReference: {fileID: 0}
     - target: {fileID: 1813142428503537145, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: shipSize
@@ -1341,15 +1345,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8868345918634996577, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 800
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8868345918634996577, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -400
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 8868345918634996577, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8868345918634996577, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_LocalRotation.w

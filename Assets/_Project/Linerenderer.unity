@@ -496,8 +496,24 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: eyeRadius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: faceRadius
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: mouthRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365536999853877424, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
+      propertyPath: mouthPosition.y
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1813142428503537145, guid: 8bf91468ec7df4b9e8cebffb30919378, type: 3}
       propertyPath: shipSize
